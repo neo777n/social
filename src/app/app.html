@@ -1,0 +1,19 @@
+<button matButton [matMenuTriggerFor]="mainMenu">Main</button>
+<mat-menu #mainMenu="matMenu" yPosition="below">
+  <a matButton (click)="goToIndex()">Home</a><br>
+  <a matButton (click)="goToAboutUs()">About Us</a>
+</mat-menu>
+
+<button matButton [matMenuTriggerFor]="posts">Posts</button>
+<mat-menu #posts="matMenu" yPosition="below">
+  <a matButton (click)="goToNewPost()">New Post</a>
+</mat-menu>
+
+<button matButton [matMenuTriggerFor]="belowMenu">Account</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item>Register New Account</button>
+  <button mat-menu-item>Login</button>
+  <a matButton (click)="goToAccountInfo()">Account Info</a>
+</mat-menu>
+
+<router-outlet />
